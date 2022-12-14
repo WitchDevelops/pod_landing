@@ -1,0 +1,61 @@
+/****************************************************/
+/*************CSS reset by Kevin Powell**************/
+/****************************************************/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* remove all the default styling */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* follow the color scheme the user is using 
+html {
+    color-scheme: dark light;
+} */
+
+body {
+    min-height: 100vh;
+}
+
+/* make all the media responsive */
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+
+/* forms fields and other elements inherit the font properties */
+input, textarea, button, select {
+    font: inherit;
+}
+
+/****************************************************/
+/********************** end *************************/
+/****************************************************/
+
+:root {
+    --very-dark-navy: #121725;
+    --medium-grey-navy: #2C344B;
+    --light-grey-blue: #5A668A;
+    --light-grey: #C2CBE5;
+    --lightest: #FFFFFF;
+    --green-contrast: #54E6AF;
+}
+
+/* mobile styles */
+
+html {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background: linear-gradient(
+        rgba(84,230,175, 0.45),
+        rgba(84,230,175, 0.45)
+    ),
+    url(./assets/mobile/image-host.jpg);
+    background-color: var(--very-dark-navy);
+}
