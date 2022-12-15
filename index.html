@@ -6,15 +6,32 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chivo&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Pod request access landing page</title>
 </head>
 <body>
-  Publish your podcasts everywhere.
+  <header>
+    <img id="logo" src="./assets/desktop/logo.svg" alt="logo of the POD podcasts">
+  </header>
+  <main class="container">
+    <h1>Publish your podcasts <span>everywhere.</span></h1>
+    <p>Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
+  Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
 
-  Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
-  Apple Podcasts, Google Podcasts, Pocket Casts and more!
+  <div class="podcasts-logos">
+    <img src="./assets/desktop/spotify.svg" alt="spotify logo">
+    <img src="./assets/desktop/apple-podcast.svg" alt="apple podcasts logo">
+    <img src="./assets/desktop/google-podcasts.svg" alt="google podcasts logo">
+    <img src="./assets/desktop/pocket-casts.svg" alt="pocket casts logo">
+  </div>
 
-  Request access
+  <div id="subscribe">
+    <input type="email" placeholder="Email address">
+    <button type="submit">Request access</button>
+  </div>
+  </main>
 </body>
 </html>
