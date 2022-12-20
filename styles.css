@@ -155,22 +155,15 @@ button {
 /* add dropshadow effects to active button */
 button:hover, button:active {
     background-color: var(--button-active);
+    font-weight: bold;
     cursor: pointer;
 }
 
-.error {
-    font-family: inherit;
+.invalid {
+    font-family: 'Chivo', sans-serif;
     font-size: 0.75rem;
     color: var(--error);
     display: block;
-    height: 2rem;
-    border: 2px solid red;
-}
-
-.error.active {
-    color: var(--error);
-    border: 2px solid yellow;
-    background-color: white;
-    height: 2rem;
-    padding: 2rem;
+    padding: 0.75rem 2rem;
+    text-align: left;
 }
