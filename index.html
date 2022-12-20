@@ -28,10 +28,17 @@
     <img src="./assets/desktop/pocket-casts.svg" alt="pocket casts logo">
   </div>
 
-  <div id="subscribe">
-    <input type="email" placeholder="Email address">
+  <form id="subscribe">
+    <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      placeholder="Email address"
+      required>
     <button type="submit">Request access</button>
-  </div>
+    <span class="error" aria-live="polite"></span>
+  </form>
   </main>
+  <script src="emailValidation.js"></script>
 </body>
 </html>

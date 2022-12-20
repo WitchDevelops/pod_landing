@@ -44,6 +44,8 @@ input, textarea, button, select {
     --light-grey: #C2CBE5;
     --lightest: #FFFFFF;
     --green-contrast: #54E6AF;
+    --button-active: #B3FFE2;
+    --error: #FB3E3E;
 }
 
 /* {
@@ -124,6 +126,11 @@ input, button {
 input {
     background-color: var(--light-grey-blue);
     padding-left: 2rem;
+    color: var(--lightest);
+}
+
+input:focus {
+    background-color: var(--medium-grey-navy);
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -146,10 +153,24 @@ button {
 }
 
 /* add dropshadow effects to active button */
-button:hover {
-    background-color: #389c76;
+button:hover, button:active {
+    background-color: var(--button-active);
+    cursor: pointer;
 }
 
-button:active {
-    background-color: #389c76;
+.error {
+    font-family: inherit;
+    font-size: 0.75rem;
+    color: var(--error);
+    display: block;
+    height: 2rem;
+    border: 2px solid red;
+}
+
+.error.active {
+    color: var(--error);
+    border: 2px solid yellow;
+    background-color: white;
+    height: 2rem;
+    padding: 2rem;
 }
