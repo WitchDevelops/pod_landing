@@ -1,7 +1,7 @@
 const form = document.getElementById('subscribe');
 
 let validation = document.createElement('span');
-validation.classList.add('invalid');
+validation.classList.add('error');
 validation.innerText = 'Oops! Please check your email';
 
 function ValidateEmail(input) {
@@ -18,6 +18,5 @@ function ValidateEmail(input) {
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   const email = document.getElementById('email').value;
-  console.log(email);
   ValidateEmail(email);
 });

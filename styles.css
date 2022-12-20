@@ -101,7 +101,6 @@ p {
 .container {
     padding: 0 1.5rem;
     text-align: center;
-
 }
 
 .podcasts-logos {
@@ -159,11 +158,21 @@ button:hover, button:active {
     cursor: pointer;
 }
 
-.invalid {
+.error {
     font-family: 'Chivo', sans-serif;
     font-size: 0.75rem;
     color: var(--error);
     display: block;
     padding: 0.75rem 2rem;
     text-align: left;
+}
+
+
+/* tablet styles */
+@media screen and (min-width: 375px) and (max-width: 768px) {
+    .layout-change {
+        max-width: 400px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }
