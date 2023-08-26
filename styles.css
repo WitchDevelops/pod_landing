@@ -13,7 +13,6 @@
     margin: 0;
     padding: 0;
     font: inherit;
-    border: 1px red solid;
 }
 
 /* follow the color scheme the user is using 
@@ -46,6 +45,11 @@ select {
     --green-contrast: #54E6AF;
     --button-active: #B3FFE2;
     --error: #FB3E3E;
+    --ff--main: 'Chivo', sans-serif;
+    --fs--title: 26px;
+    --fs--text: 15px;
+    --lh--title: 38px;
+    --lh--text: 25px;
 }
 
 /* mobile styles */
@@ -92,25 +96,25 @@ main {
     justify-content: center;
 }
 
-h1 {
-    font-family: 'Chivo', sans-serif;
+.title {
+    font-family: var(--ff--main);
     font-weight: 400;
     color: var(--green-contrast);
-    font-size: 1.6875rem;
-    line-height: 2.375rem;
+    font-size: var(--fs--title);
+    line-height: var(--lh--title);
     text-transform: uppercase;
+    & span {
+        color: var(--lightest);
+    }
 }
 
-h1>span {
-    color: var(--lightest);
-}
 
-p {
-    font-family: 'Chivo', sans-serif;
+.text {
+    font-family: var(--ff--main);
     color: var(--light-grey);
-    font-size: 0.9375rem;
-    line-height: 1.5625rem;
-    margin-top: 1rem;
+    font-size: var(--fs--text);
+    line-height: var(--lh--text);
+    margin-top: 16px;
 }
 
 .container {
@@ -166,15 +170,15 @@ input:focus {
     color: var(--lightest);
 }
 
-button {
+.button {
     background-color: var(--green-contrast);
     margin-top: 1rem;
     color: var(--very-dark-navy);
 }
 
 /* add dropshadow effects to active button */
-button:hover,
-button:active {
+.button:hover,
+.button:active {
     background-color: var(--button-active);
     font-weight: bold;
     cursor: pointer;
