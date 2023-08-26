@@ -272,8 +272,7 @@ input:focus {
      .button {
         max-width: 162px;
         position: absolute;
-        transform: translateY(-50%);
-        top: 50%;
+        top: 5px;
         right: 5px;
         margin-top: 0;
     }
@@ -299,13 +298,14 @@ input:focus {
     .container {
         padding-top: 88px;
         max-width: 723px;
+        
         margin-left: 0;
     }
 
     .tablet-container {
         width: 100%;
-        padding-left: 165px;
         position: absolute;
+        max-width: 1284px;
     }
     .tablet-container::after {
         content: url(./assets/desktop/bg-dots.svg);
@@ -313,6 +313,7 @@ input:focus {
         position: absolute;
         right: 0;
         bottom: -8%;
+        
     }
 
     header {
