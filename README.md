@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [FrontEndMentor]([https://your-solution-url.com](https://www.frontendmentor.io/solutions/responsive-landing-page-using-all-tools-i-could-think-of-T7r2PZWLyM))
-- Live Site URL: [(https://witchdevelops.github.io/pod_landing/](https://witchdevelops.github.io/pod_landing/)
+- Solution URL: https://www.frontendmentor.io/solutions/responsive-landing-page-using-all-tools-i-could-think-of-T7r2PZWLyM
+- Live Site URL: https://witchdevelops.github.io/pod_landing/
 
 ## My process
 
