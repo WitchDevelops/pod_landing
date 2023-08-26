@@ -15,16 +15,11 @@
     font: inherit;
 }
 
-/* follow the color scheme the user is using 
-html {
-    color-scheme: dark light;
-} */
-
 body {
-    min-height: 100vh;
+    height: 100vh;
+    
 }
 
-/* forms fields and other elements inherit the font properties */
 input,
 textarea,
 button,
@@ -47,26 +42,23 @@ select {
     --error: #FB3E3E;
     --ff--main: 'Chivo', sans-serif;
     --fs--title: 26px;
+    --fs--title-m: 48px;
+    --fs--title-l: 52px;
     --fs--text: 15px;
-    --lh--title: 38px;
-    --lh--text: 25px;
+    --fs--text-m: 18px;
+    --lh--title: 38px; /* 146.154% */
+    --lh--title-m: 56px; /* 116.667% */
+    --lh--title-l: 62px; /* 119.231% */
+    --lh--text: 25px; /* 166.667% */
+    --lh--text-m: 28px; /* 155.556% */
 }
 
 /* mobile styles */
-/*
-html {
-    background-blend-mode: multiply;
-    background: linear-gradient(
-        rgba(84,230,175, 0.45),
-        rgba(84,230,175, 0.45)
-    );
-    background-color: rgba(18, 23, 37, 0.9);
-    background-image: url(./assets/mobile/image-host.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;    
-} */
-
-@media screen and (max-width: 480px) {
+body {
+    display: grid;
+    place-items: center;
+}
+@media screen and (max-width: 768px) {
     html {
         background-blend-mode: multiply;
         background: linear-gradient(rgba(84, 230, 175, 0.45),
@@ -75,6 +67,7 @@ html {
         background-image: url(./assets/mobile/image-host.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+ 
     }
 
     /* hide the fallback image on mobile */
@@ -85,7 +78,7 @@ html {
 
 #logo {
     display: block;
-    margin: 3.87rem auto;
+    margin: 0 auto 3.87rem auto;
 }
 
 main {
@@ -106,8 +99,15 @@ main {
     & span {
         color: var(--lightest);
     }
+    @media (min-width: 768px) {
+        font-size: var(--fs--title-m);
+        line-height: var(--lh--title-m);
+    }
+    @media (min-width: 1440px) {
+        font-size: var(--fs--title-l);
+        line-height: var(--lh--title-l);
+    }
 }
-
 
 .text {
     font-family: var(--ff--main);
@@ -115,10 +115,21 @@ main {
     font-size: var(--fs--text);
     line-height: var(--lh--text);
     margin-top: 16px;
+    @media (min-width: 768px) {
+        font-size: var(--fs--text-m);
+        line-height: var(--lh--text-m);
+        width: 70%;
+        margin-top: 31px;
+        margin-bottom: 40px;
+    }
+    @media (min-width: 1440px) {
+        font-size: var(--fs--text-l);
+        line-height: var(--lh--text-l);
+    }
 }
 
 .container {
-    padding: 0 1.5rem;
+    padding-inline: 1.5rem;
     text-align: center;
 }
 
@@ -129,7 +140,11 @@ main {
 
 .podcasts-logos img {
     display: inline-block;
-    height: 1.0625rem;
+    height: 100%;
+    max-height: 17px;
+    @media (min-width: 768px) {
+        max-height: 29px;
+    }
 }
 
 input,
@@ -144,7 +159,8 @@ button {
 }
 
 input {
-    background-color: var(--light-grey-blue);
+    /* background-color: var(--light-grey-navy); */
+    background-color: var(--medium-grey-navy);
     padding-left: 2rem;
     color: var(--lightest);
 }
@@ -157,7 +173,6 @@ input:focus {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: var(--lightest);
     opacity: 0.5;
-    /* Firefox */
 }
 
 :-ms-input-placeholder {
@@ -193,16 +208,18 @@ input:focus {
     text-align: left;
 }
 
-
+.bg-dots {
+    display: none;
+}
 /* tablet styles */
-@media screen and (min-width: 480px) /*and (max-width: 1023px) */ {
-    /* hide the backround image */
-
+ @media screen and (min-width: 768px) { 
     body {
         background-color: var(--very-dark-navy);
-        
     }
 
+    #logo {
+        margin-top: 50px;
+    }
     .desktop-bg {
         display: flex;
         align-items: stretch;
@@ -219,24 +236,94 @@ input:focus {
         flex: 3 1 auto;
     }
 
-   
+    .tablet-container {
+        position: relative;
+
+    }
 
     .container {
         position: absolute;
-        top: 45vh;
+        bottom: 0;
         background-color: var(--very-dark-navy);
+        padding-inline: 0;
+        padding-top: 93px;
+        margin-left: 39px;
+        z-index: 1;
         width: 83%;
-        padding-left: 3.5rem;
-        
+        max-width: 635px;
     }
+   
     .description {
         text-align: left;
-        
     }
 
     .layout-change {
-        max-width: 400px;
+        width: 100%;
         display: flex;
         flex-direction: column-reverse;
+    }
+    .form__container {
+        position: relative;
+        max-width: 427px;
+    }
+    #email {
+        height: 56px;
+    }
+     .button {
+        max-width: 162px;
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        right: 5px;
+        margin-top: 0;
+    }
+    .podcasts-logos {
+        margin-bottom: 0;
+        margin-top: 64px;
+        width: 85%;
+        max-width: 535px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .bg-dots {
+        display: block;
+        margin-top: 153px;
+        margin-left: 30px;
+        margin-right: auto;
+    }
+} 
+
+/* desktop styles */
+@media (min-width: 1440px) {
+    .container {
+        padding-top: 88px;
+        max-width: 723px;
+        margin-left: 0;
+    }
+
+    .tablet-container {
+        width: 100%;
+        padding-left: 165px;
+        position: absolute;
+    }
+    .tablet-container::after {
+        content: url(./assets/desktop/bg-dots.svg);
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: -8%;
+    }
+
+    header {
+        margin: 0;
+    }
+    #logo {
+        margin: 0;
+        margin-top: -29px;
+    }
+
+    .bg-dots {
+        display: none;
     }
 }
