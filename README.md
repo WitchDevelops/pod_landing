@@ -11,6 +11,7 @@ This is a solution to the [Pod request access landing page challenge on Frontend
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
+- [Helpful resources](#helpful-resources)
   - [Continued development](#continued-development)
 
 ## Overview
@@ -75,6 +76,10 @@ form.addEventListener('submit', (e) => {
   ValidateEmail(email);
 });
 ```
+### Hwlpful resources
+
+- [Email validation guidelines #1](https://www.w3resource.com/javascript/form/email-validation.php)
+- [Email validation guidelines #2](https://www.abstractapi.com/guides/email-validation-regex-javascript)
 
 ### Continued development
 
