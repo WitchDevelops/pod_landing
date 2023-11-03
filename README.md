@@ -52,7 +52,7 @@ Users should be able to:
 How to add client-side form validation with JavaScript. I could do form validation in HTML, but in this project I learned how to add a custom message displayed below the input field instead of a browser pop-up. I have also used regex to see if the input pattern matches the expected one for a valid email.
 
 
-```
+```js
 const form = document.getElementById('subscribe');
 
 let validation = document.createElement('span');
@@ -76,7 +76,7 @@ form.addEventListener('submit', (e) => {
   ValidateEmail(email);
 });
 ```
-### Hwlpful resources
+### Helpful resources
 
 - [Email validation guidelines #1](https://www.w3resource.com/javascript/form/email-validation.php)
 - [Email validation guidelines #2](https://www.abstractapi.com/guides/email-validation-regex-javascript)
